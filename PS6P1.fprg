@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="aleja"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-27 12:34:43 AM"/>
+        <attribute name="created" value="YWxlamE7REVTS1RPUC1KSE9JTDJKOzIwMjEtMTAtMjc7MTI6MDk6NDkgQU07Mjg1OQ=="/>
+        <attribute name="edited" value="YWxlamE7REVTS1RPUC1KSE9JTDJKOzIwMjEtMTAtMjc7MTI6MzQ6NDMgQU07MTsyOTU5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="p" type="Real" array="False" size=""/>
+            <declare name="r" type="Real" array="False" size=""/>
+            <declare name="bb" type="Real" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <declare name="i" type="Real" array="False" size=""/>
+            <declare name="eb" type="Real" array="False" size=""/>
+            <declare name="ti" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter Principle&quot;" newline="True"/>
+            <input variable="p"/>
+            <output expression="&quot;Enter Interest rate&quot;" newline="True"/>
+            <input variable="r"/>
+            <assign variable="bb" expression="p * 1"/>
+            <for variable="count" start="1" end="5" direction="inc" step="1">
+                <assign variable="i" expression="bb * r"/>
+                <assign variable="eb" expression="bb + i"/>
+                <output expression="count &amp; &quot;.   $&quot; &amp; bb &amp; &quot;   $&quot; &amp; eb" newline="True"/>
+                <assign variable="bb" expression="eb"/>
+            </for>
+            <assign variable="ti" expression="eb - p"/>
+            <output expression="&quot;Total intreset earned: $&quot; &amp; ti" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
